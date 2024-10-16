@@ -1,0 +1,33 @@
+.MenuLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-default-white);
+  transition: opacity var(--trans-default);
+  will-change: opacity;
+
+  @media (width < 768px) {
+    span {
+      display: none;
+    }
+  }
+
+  &.active {
+    color: var(--color-amaranth);
+    pointer-events: none;
+  }
+
+  &:not(.is-active) {
+    @media (hover: hover) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  svg {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+  }
+}

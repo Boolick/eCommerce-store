@@ -1,0 +1,40 @@
+.Catalog {
+  padding: 80px 0;
+  overflow: hidden;
+
+  @media (width < 1024px) {
+    padding: 30px 0;
+  }
+
+  @media (width < 768px) {
+    padding: 40px 0;
+  }
+}
+
+.title {
+  margin: 0 0 40px;
+  text-align: center;
+}
+
+.catalogWrapper {
+  display: grid;
+  grid-template: "filters sort" auto "filters cat" 1fr / minmax(250px, 20%) 1fr;
+  row-gap: 30px;
+
+  @media (width < 768px) {
+    grid-template: "filters" auto "sort" auto "cat" 1fr / 1fr;
+  }
+}
+
+.CatalogSortingItem {
+  grid-area: sort;
+  align-self: start;
+}
+
+.CatalogGoodsItem {
+  grid-area: cat;
+}
+
+.CatalogFilterItem {
+  grid-area: filters;
+}

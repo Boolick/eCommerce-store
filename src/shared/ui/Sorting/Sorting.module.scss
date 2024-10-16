@@ -1,0 +1,37 @@
+.Sorting {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 0 30px;
+}
+
+.SortingBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-blue-zodiac-transparent);
+  line-height: 1.4;
+  background-color: transparent;
+  border: none;
+
+  svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+    transform: rotateX(180deg);
+  }
+}
+
+.active {
+  font-weight: 700;
+  color: var(--color-blue-zodiac);
+}
+
+.desc {
+  svg {
+    transform: rotateX(0);
+  }
+}

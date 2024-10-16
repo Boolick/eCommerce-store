@@ -1,0 +1,43 @@
+:root {
+  // Colors
+  --color-default-black: #000000;
+  --color-default-white: #ffffff;
+  --color-transparent: rgba(255, 255, 255, 0%);
+
+  --color-amaranth: #f53b49;
+  --color-alizarin: #e32a38;
+  --color-royal-blue: #4b7ee8;
+  --color-kelly-green: #2fc509;
+  --color-orange-peel: #f99808;
+  --color-white-smoke: #f6f6f6; // фон сайта
+  --color-solitude: #e9eaef;
+  --color-rock-blue: #909cb5;
+  --color-blue-zodiac: #384255; // кнопка фильтра
+  --color-blue-zodiac-transparent: rgba(56, 66, 85, 50%);
+  --color-black-rock: #2a2c38; // нижняя строка меню
+  --color-black-russian: #1a1a25; // меню и футер, текст
+
+  // Gradient
+  --black-to-right: linear-gradient(90deg, rgba(0, 0, 0, 75%) 0%, rgba(0, 0, 0, 0%) 75%);
+
+  // Typography
+  --fz-default: 16px;
+  --ff-inter: "Inter", "Arial", sans-serif;
+
+  // Animation
+  --tf-default: ease;
+  --trans-default: 0.3s var(--tf-default);
+
+  // Viewports
+  --vp-320: 320px;
+  --vp-375: 375px;
+  --vp-768: 768px;
+  --vp-1024: 1024px;
+  --vp-1280: 1280px;
+  --vp-1440: 1440px;
+  --vp-1920: 1920px;
+
+  // Retina
+  --retina-dpi: 144dpi;
+  --retina-dppx: 1.5dppx;
+}

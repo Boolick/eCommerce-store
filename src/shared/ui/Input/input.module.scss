@@ -1,0 +1,36 @@
+.InputWrapper {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+
+  &:focus {
+    border-color: #66afe9;
+    outline: none;
+  }
+  @media (width < 768px) {
+    padding: 8px;
+    font-size: 14px;
+  }
+  @media (width < 468px) {
+    padding: 5px;
+    font-size: 12px;
+  }
+}
+
+.InputWrapper label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+  @media (width < 768px) {
+    margin-bottom: 5px;
+  }
+}

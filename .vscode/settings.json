@@ -1,0 +1,41 @@
+{
+  "stylelint.config": null,
+  "editor.tabSize": 2,
+  "editor.indentSize": "tabSize",
+  "editor.formatOnSave": true,
+  "files.insertFinalNewline": true,
+  "files.autoSave": "onFocusChange",
+  "html.format.indentInnerHtml": true,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.tabWidth": 2,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "prettier.semi": true,
+  "prettier.singleAttributePerLine": true,
+  "css.format.spaceAroundSelectorSeparator": true,
+  "less.format.spaceAroundSelectorSeparator": true,
+  "scss.format.spaceAroundSelectorSeparator": true,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+  "eslint.format.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": "always",
+    "source.fixAll.eslint": "always"
+  },
+  "stylelint.validate": ["css", "less", "postcss", "scss", "sass"],
+  "stylelint.snippet": ["css", "less", "postcss", "scss", "sass"],
+  "CodeGPT.apiKey": "CodeGPT Plus Beta"
+}

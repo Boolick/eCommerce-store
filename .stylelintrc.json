@@ -1,0 +1,17 @@
+{
+  "extends": ["stylelint-config-standard-scss", "stylelint-prettier/recommended"],
+  "plugins": ["stylelint-scss", "stylelint-prettier"],
+  "rules": {
+    "prettier/prettier": [true, {"singleQuote": false}],
+    "selector-class-pattern": null,
+    "max-nesting-depth": [4, {"ignoreAtRules": ["media", "include"]}],
+    "custom-property-empty-line-before": null,
+    "declaration-empty-line-before": null,
+    "scss/double-slash-comment-empty-line-before": null,
+    "scss/dollar-variable-empty-line-before": null,
+    "color-hex-length": null,
+    "color-function-notation": null,
+    "no-descending-specificity": null
+  },
+  "ignoreFiles": ["dist/**/*.*", "build/**/*.*"]
+}

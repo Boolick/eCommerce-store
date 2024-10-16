@@ -1,0 +1,40 @@
+.Company {
+  padding: 100px 0;
+  color: var(--color-default-white);
+  background-color: var(--color-black-russian);
+
+  @media (width < 1024px) {
+    & > div {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+  }
+
+  @media (width < 768px) {
+    & > div {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+}
+
+.title {
+  margin: 0 0 40px;
+
+  @media (width < 768px) {
+    text-align: center;
+  }
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @media (width < 1024px) {
+    flex-wrap: wrap;
+  }
+}

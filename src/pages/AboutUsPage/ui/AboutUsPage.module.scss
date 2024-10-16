@@ -1,0 +1,30 @@
+.team-wrapper {
+  background: #aeaeae;
+  min-height: 100vh;
+}
+
+.page-lost__color {
+  color: blue;
+  font-weight: 800;
+  font-size: large;
+
+  @media (hover: hover) {
+    &:hover {
+      color: darkblue;
+    }
+  }
+}
+
+.rsLogo {
+  cursor: pointer;
+  padding: 20px;
+  img {
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.Footer {
+  padding: 20px 0;
+  color: var(--color-solitude);
+  background-color: var(--color-black-russian);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+
+  @media (width < 768px) {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": [
+    "airbnb-base",
+    "airbnb-typescript/base",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:import/recommended",
+    "plugin:jsx-a11y/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier", "import", "jsx-a11y"],
+  "settings": {
+    "react": {
+      "version": "18.3.1" // без этого выдается предупреждение
+    }
+  },
+  "root": true,
+  "ignorePatterns": [
+    "jest.config.*",
+    "**/vendor/*.js",
+    "node_modules",
+    "config/build/*.ts"
+  ],
+  "rules": {
+    "object-curly-spacing": "off",
+    "array-bracket-spacing": "off",
+    "prettier/prettier": "error",
+    "import/prefer-default-export": "off", // отключает необходимость дефолтного экспорта в модулях
+    "@typescript-eslint/no-explicit-any": "error", // нельзя использовать any?
+    "@typescript-eslint/no-inferrable-types": "error", // откл. автоопределение типов?
+    // запрещает написание Array<тип>, надо тип[]
+    "@typescript-eslint/array-type": [
+      "error",
+      {
+        "default": "array"
+      }
+    ],
+    // внутри классов явно указывать модификаторы доступа полям и методам
+    "@typescript-eslint/explicit-member-accessibility": [
+      "error",
+      {
+        "accessibility": "explicit",
+        "overrides": {
+          "accessors": "explicit",
+          "constructors": "off",
+          "methods": "explicit",
+          "properties": "explicit",
+          "parameterProperties": "explicit"
+        }
+      }
+    ],
+    "class-methods-use-this": "off",
+    "@typescript-eslint/explicit-function-return-type": "error", // явно прописывать возвращаемый тип ф-ции
+    "@typescript-eslint/no-unnecessary-type-assertion": "error", // не допускать типы (as)
+    "@typescript-eslint/no-non-null-assertion": "error", // не допускать наличие свойств
+    // чтобы не требовал импорта реакта с 17 версии
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-uses-react": "off",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    ],
+    // spread для пропсов иногда нужен
+    "react/jsx-props-no-spreading": "warn",
+    // чтобы можно было использовать стрелочные функции при объявлении компонентов
+    "react/function-component-definition": "off",
+    "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+    "react-hooks/exhaustive-deps": "warn", // Checks effect dependencies
+    "no-shadow": "off",
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "import/no-extraneous-dependencies": "off",
+    // чтобы можно было объявлять глобальные настроечные переменные типа __IS_DEV__
+    "no-underscore-dangle": "off",
+    "max-len": [
+      "error",
+      {
+        "ignoreComments": true,
+        "code": 100
+      }
+    ],
+    "no-restricted-globals": "warn",
+    "jsx-a11y/no-static-element-interactions": "warn",
+    "jsx-a11y/click-events-have-key-events": "warn",
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "variable",
+        "format": ["camelCase", "strictCamelCase", "PascalCase", "StrictPascalCase", "UPPER_CASE"],
+        "leadingUnderscore": "allowDouble",
+        "trailingUnderscore": "allowDouble"
+      }
+    ],
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": ["state"]
+      }
+    ]
+  },
+  "globals": {
+    "__IS_DEV__": "writable"
+  }
+}

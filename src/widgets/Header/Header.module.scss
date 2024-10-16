@@ -1,0 +1,139 @@
+.Header {
+  color: var(--color-default-white);
+  background-color: var(--color-black-russian);
+}
+
+.HeaderTop {
+  padding: 25px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  flex-shrink: 0;
+  width: 197px;
+  height: 30px;
+
+  @media (width < 768px) {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    height: 30px;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.HeaderNav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 0 0 0 40px;
+  padding: 0;
+  list-style: none;
+
+  @media (width < 375px) {
+    gap: 18px;
+  }
+}
+
+.HeaderFilter {
+  padding: 15px 0;
+  background-color: var(--color-black-rock);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.filter {
+  padding: 0;
+  color: var(--color-default-white);
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: opacity var(--trans-default);
+  will-change: opacity;
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.cart {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  transition: opacity var(--trans-default);
+  will-change: opacity;
+  cursor: pointer;
+
+  svg {
+    flex-shrink: 0;
+    width: 19px;
+    height: 23px;
+    pointer-events: none;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.MenuButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-default-white);
+  background-color: transparent;
+  border: none;
+  transition: opacity var(--trans-default);
+  will-change: opacity;
+  cursor: pointer;
+
+  @media (width < 768px) {
+    span {
+      display: none;
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  svg {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.IconUser {
+  display: inline-flex;
+  align-items: center;
+
+  svg {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+  }
+}

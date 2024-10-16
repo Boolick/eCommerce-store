@@ -1,0 +1,113 @@
+.CatalogCard {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  padding: 20px 20px 26px;
+  color: var(--color-black-russian);
+  background-color: var(--color-default-white);
+  border-radius: 6px;
+  transition: transform var(--trans-default);
+  will-change: transform;
+
+  @media (hover: hover) {
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+}
+
+.img {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.cardTitle {
+  flex-grow: 1;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+
+  @media (width < 768px) {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+.cardArea {
+  margin-top: 0;
+  color: #858fa4;
+}
+
+.footer {
+  display: flex;
+}
+
+.prices {
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.price {
+  font-size: 17px;
+  font-weight: 700;
+
+  @media (width < 768px) {
+    font-size: 16px;
+  }
+}
+
+.discountPrice {
+  text-decoration: line-through;
+  color: #858fa4;
+
+  @media (width < 768px) {
+    font-size: 14px;
+  }
+}
+
+.btn {
+  grid-area: button;
+  align-self: end;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 13px 24px;
+
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-default-white);
+
+  background-color: var(--color-amaranth);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  transition: opacity var(--trans-default);
+  will-change: opacity;
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

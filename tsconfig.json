@@ -1,0 +1,67 @@
+{
+  "compilerOptions": {
+    // куда производится сборка, в нашем случае перебивается настройками вебпака
+    "outDir": "./dist/",
+    "strict": true,
+    // автоматически включаются из-за предыдущей строки
+    // "alwaysStrict": true,
+    // "noImplicitAny": true,
+    // "strictNullChecks": true,
+    // "strictPropertyInitialization"  : true,
+    // "strictFunctionTypes": true,
+    // "noImplicitThis": true,
+    // "strictBindCallApply": true,
+    // модульная система (require/import -- CommonJS/ES6)
+    "module": "ESNext",
+    // код по итогу компилируется в:
+    "target": "es5",
+    "lib": ["ES2021", "DOM"],
+    // можем использовать jsx ?
+    "jsx": "react-jsx",
+    // позволяет также обрабатывать js-файлы
+    "allowJs": true,
+    // какие импорты будут node/classic - что это?
+    "moduleResolution": "node",
+    // для абсолютного импорта
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"]
+    },
+    // The above sample assumes version >= 2.7 or newer of TypeScript is used with the new esModuleInterop and allowSyntheticDefaultImports compiler options in your tsconfig.json file.
+    // позволяет не писать import * as ... при импорте, даже если у пакета не дефолтного экспорта
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    //  if you work on a Mac and deploy to anything but a Mac
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    // для линтинга
+    // неявные поля в интерфейсе [k: string]: string, к ним доступ из объекта через ['поле'], а не через точку
+    // "noPropertyAccessFromIndexSignature": true,
+    // проверять на существование неявные поля - ? или if 'поле' in объект
+    // "noUncheckedIndexedAccess": true,
+    // явные return при любом сценарии
+    "noImplicitReturns": true
+    // break обязателен
+    // "noFallthroughCasesInSwitch": true,
+    // избегать неиспользуемых локальных перем.
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+  },
+  // ts-node is a TypeScript execution engine and REPL for Node.js.
+  // Note that you'll also need to check your tsconfig.json file. If the module in compilerOptions in tsconfig.json is commonjs, the setting is complete, else webpack will fail with an error. This occurs because ts-node does not support any module syntax other than commonjs.
+  "ts-node": {
+    "compilerOptions": {
+      // "module": "CommonJS"
+      "module": "NodeNext",
+      "skipLibCheck": true
+    }
+  },
+  "include": [
+    "./config/jest/setupTests.ts",
+    "./config/**/*.ts",
+    "./config/**/*.tsx",
+    "./src/**/*.ts",
+    "./src/**/*.tsx"
+  ],
+  "exclude": ["node_modules"]
+}

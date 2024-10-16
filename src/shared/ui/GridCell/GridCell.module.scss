@@ -1,0 +1,155 @@
+.GridCell {
+  position: relative;
+  height: var(--height);
+  padding: 30px;
+  background-color: var(--color-solitude);
+  border-radius: 6px;
+
+  word-break: break-word;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform var(--trans-default);
+  will-change: transform;
+
+  @media (hover: hover) {
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  @media (width < 1024px) {
+    padding: 20px;
+  }
+
+  @media (width < 768px) {
+    padding: 18px 11px;
+  }
+
+  .overlay {
+    background-color: var(--color-solitude);
+  }
+}
+
+.smallHeight {
+  height: var(--height-small);
+}
+
+.doubleHeight {
+  height: unset;
+  grid-row: span 2;
+
+  @media (width < 768px) {
+    grid-row: span 1;
+    grid-column: span 2;
+    height: var(--height);
+  }
+
+  &.inverted {
+    color: var(--color-default-white);
+    background: linear-gradient(
+        9.93deg,
+        rgba(72, 77, 92, 0%) 25.95%,
+        rgba(112, 121, 148, 20%) 80.01%
+      ),
+      #1a1a25;
+  }
+}
+
+.doubleWidth {
+  grid-column: span 2;
+
+  &.inverted {
+    color: var(--color-default-white);
+    background: radial-gradient(
+        73.29% 72.73% at 76.36% 44.57%,
+        rgba(133, 143, 164, 50%) 0%,
+        rgba(86, 95, 115, 50%) 52.73%,
+        rgba(26, 26, 37, 50%) 100%
+      ),
+      #1a1a25;
+
+    .overlay {
+      background: radial-gradient(
+          73.29% 72.73% at 76.36% 44.57%,
+          rgba(133, 143, 164, 50%) 0%,
+          rgba(86, 95, 115, 50%) 52.73%,
+          rgba(26, 26, 37, 50%) 100%
+        ),
+        #1a1a25;
+    }
+  }
+}
+
+.gradient {
+  background: linear-gradient(
+      269.61deg,
+      rgba(255, 255, 255, 68%) -16.49%,
+      rgba(255, 255, 255, 0%) 99.7%
+    ),
+    #c2c4ce;
+
+  .overlay {
+    background: linear-gradient(
+        269.61deg,
+        rgba(255, 255, 255, 68%) -16.49%,
+        rgba(255, 255, 255, 0%) 99.7%
+      ),
+      #c2c4ce;
+  }
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 60%);
+  border-radius: 6px;
+  opacity: 0.8;
+}
+
+.img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+}
+
+.itemTitle {
+  position: relative;
+  margin: 0;
+  z-index: 2;
+
+  @media (width < 768px) {
+    font-size: 12px;
+    line-height: 1.25;
+  }
+}
+
+.inverted {
+  .overlay {
+    background: linear-gradient(
+        9.93deg,
+        rgba(72, 77, 92, 0%) 25.95%,
+        rgba(112, 121, 148, 20%) 80.01%
+      ),
+      #1a1a25;
+  }
+}

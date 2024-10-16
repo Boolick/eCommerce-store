@@ -1,0 +1,33 @@
+.Cart {
+  padding: 80px 0;
+  overflow: hidden;
+
+  @media (width < 1024px) {
+    padding: 30px 0;
+  }
+
+  @media (width < 768px) {
+    padding: 40px 0;
+  }
+}
+
+.title {
+  margin: 0 0 40px;
+  text-align: center;
+}
+
+.cartWrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+
+  @media (width < 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cartProducts {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
